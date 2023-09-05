@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{%extends 'home.html'%}
+{% load static %}
+<html>
+<head>
+    <title>Course List</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+{% block content %}
+<div class="container mt-4">
+    <h1>Courses</h1><br>
+    <div class="row">
+        {% for details in Courses %}
+        <div class="col-lg-3  mb-2">
+            <div class="card" >
+                <img src="{{details.image.url}}" class="card-img-top" alt="Course 1" style="height:200px" >
+                <div class="card-body">
+                    <h5 class="card-title">{{details.title}}</h5>
+                    <p class="card-text">{{details.description}}</p>
+                    <p class="card-text">{{details.price}}</p>
+                    <a href="#" class="btn btn-primary">Enroll Now</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- Include Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+{% endblock %}
+</body>
+</html>

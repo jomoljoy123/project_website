@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{%extends 'home.html'%}
+{% load static%}
+<html>
+<head>
+
+	<title>LOGIN PAGE</title>
+	<style>
+
+		#bg{background-size:100%;background-repeat:no-repeat;}
+		div{ width: 50%; text-align: center; margin-left:200px ; background-color: rgb(255,255,255,0.25) ; border-radius: 20px}
+		input:focus{background-color: lightblue}
+	</style>
+</head>
+{% block image %}
+<body id="bg" style="background-image:url('{% static 'css/image/background login.jpg' %}');background-size: 100%;">
+{% endblock %}
+{% block content %}
+
+
+<form style="text-align: center;margin: 150px" method="POST">
+	{% csrf_token %}
+<div ><br><h1 style="text-transform: uppercase; text-shadow: 2px 2px 3px blue; color: lightblue"><b><i>login FORM</i></b></h1><br>
+	<label for="username" style="font-style:oblique;font-size: 20px" ><b></b></label>
+	<input type="text" name="username" id="search" class="no-outline"  style="background-color:transparent;width: 200px; height: 30px; border: none;
+  outline: none;border-bottom: 1px solid #ccc" placeholder="E-mail or Username" ><br>
+	<label for="password" style="font-style:oblique;font-size: 20px"><b></b></label><br>
+	<input type="password" name="password"class="no-outline"  style="background-color:transparent;width: 200px; height: 30px; border: none;
+  outline: none;border-bottom: 1px solid #ccc"  id="password" placeholder="Password"><br><a href="Forget Password????.....">Forget Password????.....</a><br><br>
+	<input type="Submit" style="font-style:italic;font-family:inherit;color: white;background-color: black" value="LOGIN" >
+<br>
+	or<br><a href="{% url 'registration' %}">REGISTER</a><br>
+	<br><br><br>
+</div>
+
+</form>
+
+</body>
+{%endblock%}
+</html>

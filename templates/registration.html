@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>REGISTRATION FORM</title>
+</head>
+<body style="text-align: left;background-color: lightyellow">
+	<h1 style="text-align: center;"><i>Registration Form</i></h1><br>
+	<form method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+	<fieldset style="width: 25%; background-color: lightgreen ;margin-left: 450px"><legend style="font-style: italic;"><b>PERSONAL DETAILS</b></legend>
+	<label for="username"><b>Username:</b></label>
+	<input type="text" name="username" id="username" placeholder="Enter Username"><br>
+	<label for="firstname"><b>Firstname:</b></label>
+	<input type="text" name="firstname" id="firstname" placeholder="Enter Firstname"><br>
+	<label for="lastname"><b>Lastname :</b></label>
+	<input type="text" name="lastname" id="lastname" placeholder="Enter Lastname"><br>
+	<label for="email"><b>Email:</b></label>
+	<input type="email" name="email" id="email" placeholder="Enter Email-Id"><br>
+	<label for="password"><b>Password:</b></label><br>
+	<input type="password" name="password" id="password" placeholder="Enter Password"><br>
+	<label for="confirm_password"><b>Confirm Password:</b></label><br>
+	<input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password"><br>
+	<label for="radio"  style="font-family: courier;"><b>Gender</b></label><br>
+		<select type="text" name="radio" id="gender"><br>
+			<option name="radio"  value="">Select a Gender</option>
+		<option  name="radio" id="radio"style="font-family: courier;">Male</option>
+		<option  name="radio" id="radio"style="font-family: courier;">Female</option>
+		<option  name="radio" id="radio"style="font-family: courier;">Others</option>
+		</select>
+		<br>
+	<label for="date"><b>Date of Birth:</b></label><br>
+	<input type="date" name="date" id="date" placeholder="Enter date"><br>
+	<label for="hai"><b>District:</b></label>
+	<select type="text" name="hai" id="hai"><br>
+	<option name="hai"  value="">Select a District</option>
+	<option name="hai" value="Alappuzha">Alappuzha</option>
+	<option name="hai" value="Ernakulam">Ernakulam</option>
+	<option name="hai" value="Idukki">Idukki</option>
+	<option name="hai" value="Kannur">Kannur</option>
+	<option name="hai" value="Kasaragod">Kasaragod</option>
+	<option name="hai" value="Kollam">Kollam</option>
+	<option name="hai" value="Kottayam">Kottayam</option>
+	<option name="hai" value="kozhikode">Kozhikode</option>
+	<option name="hai" value="Malappuram">Malappuram</option>
+	<option name="hai" value="Palakkad">Palakkad</option>
+	<option name="hai" value="Pathanamthitta">Pathanamthitta</option>
+	<option name="hai" value="Thrissur">Thrissur</option>
+	<option name="hai" value="Thiruvananthapuram">Thiruvananthapuram</option>
+	<option name="hai" value="Wayanad">Wayanad</option>
+    </select><br>
+	<label for="hello"><b>State:</b></label>
+    <select type="text" name="hello" id="hello">
+	<option name="hello" value="">Select a state</option>
+	<option name="hello" value="Andhra Pradesh">Andhra Pradesh</option>
+	<option name="hello" value="Arunachal Pradesh">Arunachal Pradesh</option>
+	<option name="hello" value="Assam">Assam</option>
+	<option name="hello" value="Bihar">Bihar</option>
+	<option name="hello" value="Chhattisgarh">Chhattisgarh</option>
+	<option name="hello" value="Goa">Goa</option>
+	<option name="hello" value="Gujarat">Gujarat</option>
+	<option name="hello" value="Haryana">Haryana</option>
+	<option name="hello" value="Himachal Pradesh">Himachal Pradesh</option>
+	<option name="hello" value="Jharkhand">Jharkhand</option>
+	<option name="hello" value="Karnataka">Karnataka</option>
+	<option name="hello" value="Kerala">Kerala</option>
+	<option name="hello" value="Madhya Pradesh">Madhya Pradesh</option>
+	<option name="hello" value="Maharashtra">Maharashtra</option>
+	<option name="hello" value="Manipur">Manipur</option>
+	<option name="hello" value="Meghalaya">Meghalaya</option>
+	<option name="hello" value="Mizoram">Mizoram</option>
+	<option name="hello" value="Nagaland">Nagaland</option>
+	<option name="hello" value="Odisha">Odisha</option>
+	<option name="hello" value="Punjab">Punjab</option>
+	<option name="hello" value="Rajasthan">Rajasthan</option>
+	<option name="hello" value="Sikkim">Sikkim</option>
+	<option name="hello" value="Tamil Nadu">Tamil Nadu</option>
+	<option name="hello" value="Telangana">Telangana</option>
+	<option name="hello" value="Tripura">Tripura</option>
+	<option name="hello" value="Uttar Pradesh">Uttar Pradesh</option>
+	<option name="hello" value="Uttarakhand">Uttarakhand</option>
+	<option name="hello" value="West Bengal">West Bengal</option>
+    </select><br>
+	<label for="country"><b>Country:</b></label>
+	<input type="text" name="country" id="country" placeholder="Enter Country"><br><br>
+	<label for="pin"><b>Pincode:</b></label>
+	<input type="pin" name="pin" id="pin" pattern="[0-9]{6}"><br>
+	<label for="file" ><b>Upload an image:</b></label>
+	<input type="file" name="file" id="file">
+	<br>
+	<b><input type="Reset"  style="font-style:italic; font-family:inherit;color: white;background-color: brown  " value="Reset">   </b>
+	<b><input type="Submit" style="font-style:italic;font-family:inherit;color: white;background-color: black "  value="Submit" ></b> </fieldset>
+	</form></body>
+</html>
